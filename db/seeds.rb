@@ -1,4 +1,4 @@
-
+# Sample blog data
 10.times do |blog|
 	Blog.create!(
 			title: "My Blog Post #{blog + 1}",
@@ -15,6 +15,7 @@ nisi numquam quidem reiciendis sunt veritatis."
 	)
 end
 
+# Sample skills data
 puts "10 blog posts created"
 
 5.times do |skill|
@@ -26,6 +27,7 @@ end
 
 puts "5 skills created"
 
+# Sample portfolio data
 9.times do |portfolio_item|
 	Portfolio.create!(
 					 title: "Portfolio title: #{portfolio_item + 1}",
