@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28c2c9bf-2e2d-47d8-8952-f85aff14f600" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/blogs_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/blogs_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/blogs/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/blogs/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
-    </list>
+    <list default="true" id="28c2c9bf-2e2d-47d8-8952-f85aff14f600" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
     <ignored path="$PROJECT_DIR$/public/system/" />
@@ -27,8 +22,8 @@
           <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/views/blogs/index.html.erb">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="166">
-                  <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+                <state relative-caret-position="138">
+                  <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
                 </state>
               </provider>
             </entry>
@@ -118,13 +113,12 @@
             <path>
               <item name="DevcampPortfolio" type="b2602c69:ProjectViewProjectNode" />
               <item name="DevcampPortfolio" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DevcampPortfolio" type="b2602c69:ProjectViewProjectNode" />
               <item name="DevcampPortfolio" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="tmp" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -135,7 +129,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="index.html.erb&#9;FILE&#9;file:///Users/Jacob/Development/RubyDev/Rails/UdemyRailsCourse/DevcampPortfolio/app/views/blogs/index.html.erb&#10;destr&#9;null&#9;null&#10;edit&#9;FILE&#9;file:///Users/Jacob/Development/RubyDev/Rails/UdemyRailsCourse/DevcampPortfolio/app/views/blogs/edit.html.erb&#10;create&#9;FILE&#9;file:///Users/Jacob/Development/RubyDev/Rails/UdemyRailsCourse/DevcampPortfolio/db/migrate/20190608232824_create_blogs.rb&#10;new&#9;FILE&#9;file:///Users/Jacob/Development/RubyDev/Rails/UdemyRailsCourse/DevcampPortfolio/app/views/blogs/new.html.erb&#10;Blog&#9;null&#9;null&#10;routes&#9;FILE&#9;file:///Users/Jacob/Development/RubyDev/Rails/UdemyRailsCourse/DevcampPortfolio/config/routes.rb" />
+    <property name="SearchEverywhereHistoryKey" value="env&#9;null&#9;null&#10;index.html.erb&#9;FILE&#9;file:///Users/Jacob/Development/RubyDev/Rails/UdemyRailsCourse/DevcampPortfolio/app/views/blogs/index.html.erb&#10;destr&#9;null&#9;null&#10;edit&#9;FILE&#9;file:///Users/Jacob/Development/RubyDev/Rails/UdemyRailsCourse/DevcampPortfolio/app/views/blogs/edit.html.erb&#10;create&#9;FILE&#9;file:///Users/Jacob/Development/RubyDev/Rails/UdemyRailsCourse/DevcampPortfolio/db/migrate/20190608232824_create_blogs.rb&#10;new&#9;FILE&#9;file:///Users/Jacob/Development/RubyDev/Rails/UdemyRailsCourse/DevcampPortfolio/app/views/blogs/new.html.erb&#10;Blog&#9;null&#9;null&#10;routes&#9;FILE&#9;file:///Users/Jacob/Development/RubyDev/Rails/UdemyRailsCourse/DevcampPortfolio/config/routes.rb" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -261,12 +255,12 @@
       <option name="presentableId" value="Default" />
       <updated>1560036203502</updated>
       <workItem from="1560036206117" duration="3286000" />
-      <workItem from="1560039597193" duration="6117000" />
+      <workItem from="1560039597193" duration="7931000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9403000" />
+    <option name="totallyTimeSpent" value="11217000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="840" y="23" width="840" height="1027" extended-state="0" />
@@ -279,7 +273,7 @@
       <window_info anchor="right" id="Routes" order="3" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32903227" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.0" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.32957393" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Tail" order="7" />
       <window_info anchor="right" id="Database" order="3" />
@@ -381,17 +375,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/blogs/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/tmp/development_secret.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/blogs/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/rubystubs25/env.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="98">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/blogs/new.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/blogs/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="138">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>
