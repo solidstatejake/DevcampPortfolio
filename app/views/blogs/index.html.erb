@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<div><%= link_to "Back to Home", root_path %> </div>
+
 <h1>Blogs</h1>
 
 <table>
@@ -7,15 +9,17 @@
     <tr>
       <th>Blog Title</th>
       <th>Blog Body</th>
-      <th colspan="3"></th>
+      <th colspan="4"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @blogs.each do |blog| %>
+<!--  .reverse to make last blog post appear first-->
+    <% @blogs.reverse.each do |blog| %>
       <tr>
         <td><%= blog.title %></td>
         <td><%= blog.body %></td>
+        <td><%= link_to blog.status, toggle_status_blog_path(blog) %></td>
         <td><%= link_to 'Show', blog %></td>
         <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
         <td><%= link_to 'Delete Post', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -2,7 +2,8 @@ class BlogsController < ApplicationController
   # This line allows the set_blog() method below to be accessed
   # by the four methods in the array. Basically, the code in
   # set_blog() is dumped into each of said methods.
-  before_action :set_blog, only: [:show, :edit, :update, :destroy]
+  before_action :set_blog, only: [:show, :edit, :update, :destroy,
+                                  :toggle_status]
 
   # GET /blogs
   # GET /blogs.json
@@ -77,6 +78,12 @@ class BlogsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to blogs_url, notice: 'Post was removed.' }
     end
+  end
+
+  def toggle_status
+    @blog.draft? ? @blog.published! : @blog.draft!
+    redirect_to blogs_path,
+                notice: "#{@blog.title} status is now #{@blog.status}."
   end
 
   private
