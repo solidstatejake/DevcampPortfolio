@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Sample topic data
 3.times do |topic|
   Topic.create!(
   title: "Topic #{topic}"
@@ -69,9 +70,10 @@ end
 
 puts '9 portfolio items created'
 
+# Sample technology data
 3.times do |technology|
   Portfolio.last.technologies.create!(
-    name: "Technology #{technology + 1}"
+  name: "Technology #{technology + 1}"
   )
 end
 
