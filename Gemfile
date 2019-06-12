@@ -60,3 +60,6 @@ gem 'friendly_id', '~> 5.1.0', require: 'friendly_id' # Note: You MUST use 5.0.0
 # ActsAsTaggableOn gem allows for the specification of an arbitrary number of
 # tag "contexts" that can be used locally or in combination.
 gem 'acts-as-taggable-on', '~> 6.0'
+
+# Devise gem provides flexible authentication
+gem 'devise', '~> 4.6', '>= 4.6.2'
