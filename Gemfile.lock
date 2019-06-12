@@ -45,6 +45,7 @@ GEM
     acts-as-taggable-on (6.0.0)
       activerecord (~> 5.0)
     arel (9.0.0)
+    awesome_print (1.8.0)
     bcrypt (3.1.13)
     bindex (0.7.0)
     bootsnap (1.4.4)
@@ -184,6 +185,7 @@ PLATFORMS
 
 DEPENDENCIES
   acts-as-taggable-on (~> 6.0)
+  awesome_print
   bootsnap (>= 1.1.0)
   byebug
   coffee-rails (~> 4.2)

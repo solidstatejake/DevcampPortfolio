@@ -4,6 +4,7 @@
 #
 # SEE `rake routes` in the terminal to determine where to route.
 Rails.application.routes.draw do
+  devise_for :users
   resources :portfolios, except: [:show]
   get 'portfolio/:id', to: 'portfolios#show', as: 'portfolio_show'
 
