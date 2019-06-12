@@ -56,3 +56,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # FriendlyId gem allows for SEO friendly URLs
 gem 'friendly_id', '~> 5.1.0', require: 'friendly_id' # Note: You MUST use 5.0.0 or greater for Rails 4.0+
+
+# ActsAsTaggableOn gem allows for the specification of an arbitrary number of
+# tag "contexts" that can be used locally or in combination.
+gem 'acts-as-taggable-on', '~> 6.0'

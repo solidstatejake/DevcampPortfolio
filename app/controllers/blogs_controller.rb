@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 class BlogsController < ApplicationController
   # This line allows the set_blog() method below to be accessed
   # by the four methods in the array. Basically, the code in
   # set_blog() is dumped into each of said methods.
-  before_action :set_blog, only: [:show, :edit, :update, :destroy,
-                                  :toggle_status]
+  before_action :set_blog, only: %i[show edit update destroy
+                                    toggle_status]
 
   # GET /blogs
   # GET /blogs.json
@@ -35,7 +37,7 @@ class BlogsController < ApplicationController
   #
   # This method works like `new()` and `create()` do. That is,
   # `edit()` is to `new()` as `create()` is to `update()`.
-  def edit
+  def edit;
   end
 
   # POST /blogs
@@ -49,7 +51,7 @@ class BlogsController < ApplicationController
     respond_to do |format|
       if @blog.save
         format.html { redirect_to @blog, notice: 'Your post is now live.' }
-        else
+      else
         format.html { render :new }
       end
     end
@@ -87,13 +89,14 @@ class BlogsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_blog
-      @blog = Blog.friendly.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def blog_params
-      params.require(:blog).permit(:title, :body)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_blog
+    @blog = Blog.friendly.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def blog_params
+    params.require(:blog).permit(:title, :body)
+  end
 end

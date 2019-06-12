@@ -7,6 +7,7 @@ class PortfoliosController < ApplicationController
 
   def new
     @portfolio_item = Portfolio.new
+    3.times { @portfolio_item.technologies.build }
   end
 
   def create
@@ -42,24 +43,24 @@ class PortfoliosController < ApplicationController
   end
 
   def show
-	  @portfolio_item = Portfolio.find(params[:id])
-
+    @portfolio_item = Portfolio.find(params[:id])
   end
 
   def destroy
-	  # Perform lookup
-	  @portfolio_item = Portfolio.find(params[:id])
+    # Perform lookup
+    @portfolio_item = Portfolio.find(params[:id])
 
-	  # Destroy the record
-	  @portfolio_item.destroy
+    # Destroy the record
+    @portfolio_item.destroy
 
-	  # Redirect
-	  respond_to do |format|
-		  format.html { redirect_to portfolios_url, notice: 'Portfolio item was deleted' }
-	  end
+    # Redirect
+    respond_to do |format|
+      format.html { redirect_to portfolios_url, notice: 'Portfolio item was deleted' }
+    end
   end
 
   def portfolio_params
-    params.require(:portfolio).permit(:title, :subtitle, :body)
+    params.require(:portfolio).permit(:title, :subtitle, :body,
+                                      technologies_attributes: [:name])
   end
 end
