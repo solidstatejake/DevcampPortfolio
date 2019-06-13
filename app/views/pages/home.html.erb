@@ -1,4 +1,4 @@
-<h1>Welcome<%= ", #{current_user.first_name}" unless current_user.nil? %> </h1> </br>
+<h1>Welcome<%= ", #{current_user.first_name}"%>!</h1> </br>
 
 <h1><%= link_to 'Blog Posts', blogs_path %></h1>
 <% @posts.each do |post| %>
@@ -17,6 +17,7 @@
 <% end %>
 
 <br/><br/>
+
 <h1><%= link_to 'Portfolios', portfolios_path %></h1>
 <% @portfolios.each do |portfolio| %>
   <%= portfolio.title %> |
