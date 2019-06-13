@@ -10,4 +10,11 @@ module ApplicationHelper
     end
   end
 
+  def source_helper
+    unless session[:source].nil?
+      greeting = "Thanks for visiting me from #{session[:source].titleize}!"
+      content_tag(:p, greeting)
+    end
+  end
+
 end

@@ -21,9 +21,9 @@
 
   <%= yield %>
 
-  <%	unless session[:source].nil?  %>
-    <p>Thanks for visiting me from <%= session[:source].titleize%>!</p>
-  <% end %>
+  <%= source_helper %>
+
+
 
 </body>
 </html>
