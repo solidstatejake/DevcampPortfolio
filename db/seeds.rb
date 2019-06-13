@@ -68,6 +68,8 @@ end
   )
 end
 
+# end sample portfolio data
+
 puts '9 portfolio items created'
 
 # Sample technology data
@@ -79,6 +81,9 @@ end
 
 puts '3 technologies created'
 
+# end sample technology data
+
+# Sample user data
 5.times do |user|
   User.create!(
   email: "email#{user + 1}@domain.com",
@@ -89,3 +94,5 @@ puts '3 technologies created'
 end
 
 puts '5 users created'
+
+# end sample technology data
