@@ -16,11 +16,18 @@ class BlogsController < ApplicationController
   #      blog post would be shown.
   def index
     @blogs = Blog.all
+    @page_title = 'My Portfolio Blog'
   end
 
   # GET /blogs/1
   # GET /blogs/1.json
+  #
+  # NOTICE how we use @blog. The reason we have access to this instance variable
+  #        is because of `before_action :set_blog`. This gives up access to the
+  #        `@blog` instance variable.
   def show
+    @page_title = @blog.title
+    @seo_keywords = @blogs.body
   end
 
   # GET /blogs/new
