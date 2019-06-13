@@ -78,3 +78,14 @@ puts '9 portfolio items created'
 end
 
 puts '3 technologies created'
+
+5.times do |user|
+  User.create!(
+  email: "fakeEmail#{user + 1}@fakeDomain.com",
+  password: "password",
+  name: "First_name#{user + 1} Last_name#{user + 1}",
+  sign_in_count: 0,
+  )
+end
+
+puts '5 users created'

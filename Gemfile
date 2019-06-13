@@ -54,9 +54,15 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+# Awesome Print gem allows for pretty-printing of objects
+gem 'awesome_print'
+
 # FriendlyId gem allows for SEO friendly URLs
 gem 'friendly_id', '~> 5.1.0', require: 'friendly_id' # Note: You MUST use 5.0.0 or greater for Rails 4.0+
 
 # ActsAsTaggableOn gem allows for the specification of an arbitrary number of
 # tag "contexts" that can be used locally or in combination.
 gem 'acts-as-taggable-on', '~> 6.0'
+
+# Devise gem provides flexible authentication
+gem 'devise', '~> 4.6', '>= 4.6.2'
