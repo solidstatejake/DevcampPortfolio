@@ -6,6 +6,7 @@ class BlogsController < ApplicationController
   # set_blog() is dumped into each of said methods.
   before_action :set_blog, only: %i[show edit update destroy
                                     toggle_status]
+  layout "blog"
 
   # GET /blogs
   # GET /blogs.json
@@ -27,7 +28,7 @@ class BlogsController < ApplicationController
   #        `@blog` instance variable.
   def show
     @page_title = @blog.title
-    @seo_keywords = @blogs.body
+
   end
 
   # GET /blogs/new
