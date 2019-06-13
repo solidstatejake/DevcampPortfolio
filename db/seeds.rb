@@ -81,9 +81,9 @@ puts '3 technologies created'
 
 5.times do |user|
   User.create!(
-  email: "email#{user + 1}@domain.com",
+  email: "fakeEmail#{user + 1}@fakeDomain.com",
   password: "password",
-  name: "First#{user + 1} Last#{user + 1}",
+  name: "First_name#{user + 1} Last_name#{user + 1}",
   sign_in_count: 0,
   )
 end
