@@ -8,6 +8,16 @@ class BlogsController < ApplicationController
                                     toggle_status]
   layout "blog"
 
+  # `all:` means that anyone visiting the site can access the specified
+  #        methods/pages
+  # `user:` means anyone with an account has access to the specified
+  #         methods/pages
+  # `site_admin:` means the owner of the site can access everything
+  # (since we put :all)
+  access all: [:show, :index],
+         user: { except: [:destroy, :new, :create, :update, :edit, :toggle_status]},
+         site_admin: :all
+
   # GET /blogs
   # GET /blogs.json
   #
