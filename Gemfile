@@ -67,3 +67,10 @@ gem 'acts-as-taggable-on', '~> 6.0'
 
 # Devise gem provides flexible authentication
 gem 'devise', '~> 4.6', '>= 4.6.2'
+
+# JQuery
+gem 'jquery-rails'
+
+# Bootstrap gem for CSS / JS styles that are mobile-first/mobile-friendly
+gem 'bootstrap', '~> 4.3.1'
+
