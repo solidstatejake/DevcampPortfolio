@@ -74,5 +74,4 @@ gem 'jquery-rails'
 # Bootstrap gem for CSS / JS styles that are mobile-first/mobile-friendly
 gem 'bootstrap', '~> 4.3.1'
 
-gem 'solidstate_view_tool', git: 'https://github.com/solidstatejake/solidstate_view_tool'
-
+gem 'solidstate_view_tool', '~> 0.1.0'
