@@ -17,4 +17,8 @@ module ApplicationHelper
     end
   end
 
+  def copyright_generator
+    SolidStateViewTool::Renderer.copyright 'Jacob Berg', "It's mine, bitch."
+
+  end
 end
