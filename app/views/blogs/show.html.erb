@@ -1,28 +1,27 @@
+<div class='col-sm-8 blog-main'>
 
+  <div class='blog-post'>
 
-    <div class='col-sm-8 blog-main'>
+    <h2 class='blog-post-title'><%= @blog.title %></h2>
 
-    <div class='blog-post'>
+    <p class='blog-post-meta'><%= distance_of_time_in_words(@blog.created_at, Time.now).titleize %> Ago</p>
 
-        <h2 class='blog-post-title'><%= @blog.title %></h2>
-        <p class='blog-post-meta'><%= distance_of_time_in_words(@blog.created_at, Time.now).titleize %> Ago</p>
+    <% if logged_in? :site_admin %>
 
-        <% if logged_in? :site_admin %>
+      <p class='blog-post-meta'>
+        <%= link_to "Post status: #{blog.status.titleize}", toggle_status_blog_path(blog) %> /
+        <%= link_to 'Edit', edit_blog_path(blog) %> /
+        <%= link_to 'Delete Post', blog, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </p>
 
-          <p class='blog-post-meta'>
-            <%= link_to "Post status: #{blog.status.titleize}", toggle_status_blog_path(blog) %> /
-            <%= link_to 'Edit', edit_blog_path(blog) %> /
-            <%= link_to 'Delete Post', blog, method: :delete, data: { confirm: 'Are you sure?' } %>
-          </p>
+    <% end %>
 
-        <% end %>
+    <p>
+      <%= @blog.body %>
+    </p>
 
-        <p>
-          <%= @blog.body %>
-        </p>
-
-      </div>
-    </div>
+  </div>
+</div>
 
 
 
