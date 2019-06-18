@@ -7,41 +7,21 @@
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
 
-  <meta name="keywords" content="<%= @seo_keywords %>" />
+  <meta name="keywords" content="<%= @seo_keywords %>"/>
 
   <%= stylesheet_link_tag 'portfolios', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 
-  <body>
+<body>
 
-<!-- NAV-->
-  <%= render 'shared/portfolio_nav' %>
-<!-- NAV-->
+    <%= render 'shared/portfolio_nav' %>
 
+    <%= render 'shared/portfolio_jumbotron' %>
 
-<!--JUMBOTRON-->
-<section class="jumbotron text-center">
-  <div class="container">
-    <h1 class="jumbotron-heading">Album example</h1>
-    <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
-    <p>
-      <a href="#" class="btn btn-primary">Main call to action</a>
-      <a href="#" class="btn btn-secondary">Secondary action</a>
-    </p>
-  </div>
-</section>
+    <%= yield %>
 
-<!--JUMBOTRON-->
+    <%= render 'shared/portfolio_footer' %>
 
-
-  <%#= login_helper %>
-
-  <%= yield %>
-
-  <!--FOOTER-->
-<%= render 'shared/portfolio_footer'%>
-
-  <!--FOOTER-->
-  </body>
+</body>
 </html>
