@@ -1,7 +1,8 @@
 @import "bootstrap";
-
+@import 'font-awesome';
 /*
  * Globals
+ *=require font-awesome
  */
 
 @media (min-width: 48em) {
@@ -167,8 +168,23 @@ h6, .h6 {
   margin-bottom: 0;
 }
 
+/*
+ *  Custom-Styles
+ */
+
 textarea {
   &#blog_body {
     height: 30rem;
   }
+}
+
+.sidebar-module {
+
+  .social-media-links{
+    font-size: 1.25rem;
+  }
+}
+
+.blog-footer {
+ width: 100%;
 }

@@ -17,6 +17,6 @@ module ApplicationHelper
   end
 
   def copyright_generator
-    SolidStateViewTool::Renderer.copyright 'Jacob Berg', "It's mine, bitch."
+    SolidStateViewTool::Renderer.copyright 'Jacob Berg', 'Made with love and Rails'
   end
 end

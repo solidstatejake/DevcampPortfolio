@@ -26,7 +26,7 @@ class BlogsController < ApplicationController
   # e.g. if we wrote `@blogs = Blog.limit(1)`, then only one
   #      blog post would be shown.
   def index
-    @blogs = Blog.all
+    @blogs = Blog.page(params[:page]).per(5)
     @page_title = 'My Portfolio Blog'
   end
 

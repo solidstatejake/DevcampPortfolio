@@ -16,13 +16,7 @@
 <body>
   <%= render 'shared/blog_nav' %>
 
-  <div class='blog-header'>
-    <div class='container'>
-      <h1 class='blog-title'>My Blog</h1>
-      <p class='lead blog-description'><%= 'My thoughts - your screen' %></p>
-      <p><%= link_to 'New Blog', new_blog_path if logged_in? :site_admin %></p>
-    </div>
-  </div>
+  <%= render 'shared/blog_header' %>
 
   <div class='container'>
 
@@ -32,18 +26,13 @@
 
       <%= render 'shared/blog_sidebar'%>
 
-
     </div>
-      <footer class='blog-footer'>
-        <p>
-          <a href='#'>Back to top</a>
-        </p>
-      </footer>
 
-      <%= source_helper %>
-
+    <%#= source_helper %>
 
   </div>
+
+  <%= render 'shared/blog_footer' %>
 
 </body>
 </html>

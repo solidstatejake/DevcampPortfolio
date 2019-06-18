@@ -22,8 +22,10 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
+#
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -80,3 +82,10 @@ gem 'solidstate_view_tool', '~> 0.1.0'
 # Petergate is a gem used for authorization (NOT authentication). It helps
 # to create a permission structure for users within the application
 gem 'petergate', '~> 2.0', '>= 2.0.1'
+
+# Font-Awesome provides the Font-Awesome web fonts and stylesheets as a Rails
+# engine to use with the asset pipeline
+gem 'font-awesome-rails'
+
+# Kaminari gem allows for scope and engine based pagination.
+gem 'kaminari', '~> 1.1', '>= 1.1.1'
