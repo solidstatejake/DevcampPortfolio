@@ -1,8 +1,12 @@
 <%= link_to 'Create New Portfolio Item', new_portfolio_url if logged_in? :site_admin %>
 
+<div class="album text-muted">
+  <div class="container">
 
-<div class="col-sm-8">
-  <%= render partial: 'portfolio_item', collection: @portfolio_items %>
+    <div class="row">
+
+        <%= render partial: 'portfolio_item', collection: @portfolio_items %>
+
+    </div>
+  </div>
 </div>
-<div class="col-sm-4"></div>
-

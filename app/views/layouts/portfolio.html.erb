@@ -1,38 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset='utf-8'>
-  <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title><%= @page_title %></title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
 
-  <meta name="keywords" content="<%= @seo_keywords %>"/>
+  <meta name="keywords" content="<%= @seo_keywords %>" />
 
-  <%= stylesheet_link_tag 'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag 'portfolios', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 
-<body>
+  <body>
 
-<%= render 'shared/portfolio_nav' %>
-
-<div class='blog-header'>
-  <div class='container'>
-    <h1 class='blog-title'>My Portfolio</h1>
-    <p class='lead blog-description'><%= 'My work through the years' %></p>
-    <div class='container'>
-
-      <div class='row'>
-
-        <%= yield %>
+<!-- NAV-->
+  <%= render 'shared/portfolio_nav' %>
+<!-- NAV-->
 
 
-      </div>
-
-    </div>
+<!--JUMBOTRON-->
+<section class="jumbotron text-center">
+  <div class="container">
+    <h1 class="jumbotron-heading">Album example</h1>
+    <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
+    <p>
+      <a href="#" class="btn btn-primary">Main call to action</a>
+      <a href="#" class="btn btn-secondary">Secondary action</a>
+    </p>
   </div>
-</div>
-</div>
-</body>
+</section>
+
+<!--JUMBOTRON-->
+
+
+  <%#= login_helper %>
+
+  <%= yield %>
+
+  <!--FOOTER-->
+<%= render 'shared/portfolio_footer'%>
+
+  <!--FOOTER-->
+  </body>
 </html>

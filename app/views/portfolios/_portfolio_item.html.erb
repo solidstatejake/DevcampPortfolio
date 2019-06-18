@@ -1,18 +1,20 @@
-<h2><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item) %></h2>
+<div class="card">
 
-<h3><%= portfolio_item.subtitle %></h3>
+  <h2><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item) %></h2>
 
-<p><%= portfolio_item.body %></p>
+  <h3><%= portfolio_item.subtitle %></h3>
 
-<p><%= image_tag portfolio_item.thumb_image unless portfolio_item.thumb_image.nil? %></p>
+  <%= image_tag portfolio_item.thumb_image unless portfolio_item.thumb_image.nil? %>
 
-<% if logged_in? :site_admin %>
-  <%= link_to "Edit Portfolio Item #{portfolio_item.id}",
-              edit_portfolio_path(portfolio_item) %>
+  <% if logged_in? :site_admin %>
+    <%= link_to "Edit Portfolio Item #{portfolio_item.id}",
+                edit_portfolio_path(portfolio_item) %>
 
-  <%= link_to "Delete Portfolio Item", portfolio_path(portfolio_item),
-              method: :delete,
-              data:   { confirm:
-                            "Are you sure you wish to permanently delete this
-                      portfolio item?" } %>
-<% end %>
+    <%= link_to 'Delete Portfolio Item', portfolio_path(portfolio_item),
+                method: :delete,
+                data:   { confirm:
+                              'Are you sure you wish to permanently delete this
+                      portfolio item?' } %>
+  <% end %>
+
+</div>
