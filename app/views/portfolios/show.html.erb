@@ -1,18 +1,37 @@
-<%= image_tag @portfolio_item.main_image unless @portfolio_item.main_image.nil? %>
 
-<h1><%= @portfolio_item.title %></h1>
+<main>
 
+  <article class="container portfolio-container">
 
-<p><em><%= @portfolio_item.subtitle %></em></p>
+    <div class="row">
 
+      <div class="col-xl-7">
+        <%= image_tag @portfolio_item.main_image, :class => 'd-block mx-auto' %>
+      </div>
 
-<p><%= @portfolio_item.body %></p>
-
-<h2>Technologies Used:</h2>
-
-<%	@portfolio_item.technologies.each do |tech| %>
-  <p><%= tech.name %> </p>
-<% end %>
+      <div class="col-xl-5 mt-4">
+        <h1><%= @portfolio_item.title %></h1>
 
 
-<%= link_to "Back", portfolios_path %>
+        <p><em><%= @portfolio_item.subtitle %></em></p>
+
+
+        <p><%= @portfolio_item.body %></p>
+
+        <h3>Technologies Used:</h3>
+
+        <%	@portfolio_item.technologies.each do |tech| %>
+          <p><%= tech.name %> </p>
+        <% end %>
+
+
+      </div>
+    </div>
+
+
+  </article>
+</main>
+
+<p class="text-center">
+  <%= link_to 'View all portfolio items'.titleize, portfolios_path, class: 'mx-auto mt-5 btn btn-primary' %>
+</p>
