@@ -1,31 +1,45 @@
-
 <%= form_with(model: @portfolio_item, local: true) do |form| %>
+  <div class="row">
+    <div class="col-md-6">
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+      <div class="form-group">
+        <%= form.label :title %>
+        <%= form.text_field :title, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :subtitle %>
+        <%= form.text_field :subtitle, class: 'form-control' %>
+      </div>
+
+    </div>
+
+
+    <div class="col-md-6">
+
+      <div class="form-group">
+        <%= form.label :body %>
+        <%= form.text_area :body, class: 'form-control' %>
+      </div>
+
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :subtitle %>
-    <%= form.text_field :subtitle %>
-  </div>
 
-  <div class="field">
-    <%= form.label :body %>
-    <%= form.text_area :body %>
-  </div>
+  <h2>Technologies Used:</h2>
+  <%# if request.fullpath == new_portfolio_path %>
 
-  <ul>
+  <div>
     <%= form.fields_for :technologies do |tech_form| %>
-      <li>
+      <div class="form-group">
         <%= tech_form.label :name %>
-        <%= tech_form.text_field :name %>
-      </li>
+        <%= tech_form.text_field :name, class: 'form-control' %>
+      </div>
     <% end %>
-  </ul>
+  </div>
 
-  <div class="actions">
-    <%= form.submit %>
+
+  <div class="form-group">
+    <%= form.submit 'Create Portfolio Item', class: 'btn btn-primary' %>
   </div>
 <% end %>
