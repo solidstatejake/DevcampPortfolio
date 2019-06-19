@@ -7,7 +7,7 @@
       <div class="col-sm-8 py-4">
 
         <h4 class="text-white">About</h4>
-        <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad aperiam architecto hic modi? Aliquam aliquid aspernatur, aut autem consequatur cupiditate dolor dolorum esse eveniet facilis harum impedit in iure labore libero maiores numquam odio perferendis possimus quae quibusdam quod, similique sint vitae voluptatem. Ad error ex excepturi officiis recusandae?</p>
 
       </div>
 
@@ -17,11 +17,8 @@
         <h4 class="text-white">Explore</h4>
 
         <ul class="list-unstyled">
-          <li><%= link_to 'Home', root_path, class: 'text-white' %></li>
-          <li><%= link_to 'About', about_me_path, class: 'text-white' %></li>
-          <li><%= link_to 'Contact', contact_path, class: 'text-white' %></li>
-          <li><%= link_to 'Blog', blogs_path, class: 'text-white' %></li>
-          <li><%= link_to 'Portfolio', portfolios_path, class: 'text-white' %></li>
+
+          <%= nav_helper 'li', 'text-white' %>
           <li><%= login_helper 'text-white btn btn-sm btn-outline-secondary' %> </li>
         </ul>
 
