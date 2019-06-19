@@ -16,7 +16,7 @@ class PortfoliosController < ApplicationController
       Portfolio.find(value[:id]).update(position: value[:position])
     end
 
-    render body: nil #make so rails doesn't try to find a 'sort' view
+    render nothing: true #make so rails doesn't try to find a 'sort' view
   end
 
   def new

@@ -17,6 +17,10 @@ module ApplicationHelper
     end
   end
 
+  def sortable_permission_helper
+    "sortable" if logged_in? :site_admin
+  end
+
   def copyright_generator
     SolidStateViewTool::Renderer.copyright 'Jacob Berg', 'Made with Rails, Bootstrap, and love'
   end
