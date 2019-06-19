@@ -1,17 +1,15 @@
-<article class="container portfolio-container">
+<article class="container portfolio-container shadow">
 
   <div class="row">
 
     <div class="col-xl-7">
-      <%= image_tag @portfolio_item.main_image, :class => 'd-block mx-auto' %>
+      <%= image_tag @portfolio_item.main_image, :class => 'd-block mx-auto img-fluid border border-light shadow' %>
     </div>
 
     <div class="col-xl-5 mt-4 portfolio-show-data">
       <h1><%= @portfolio_item.title %></h1>
 
-
       <p><em><%= @portfolio_item.subtitle %></em></p>
-
 
       <p><%= @portfolio_item.body %></p>
 
@@ -21,13 +19,10 @@
         <p><%= tech.name %> </p>
       <% end %>
 
-
     </div>
   </div>
 
-
 </article>
-
 
 <p class="text-center">
   <%= link_to 'View all portfolio items'.titleize, portfolios_path, class: 'mx-auto mt-5 btn btn-primary' %>

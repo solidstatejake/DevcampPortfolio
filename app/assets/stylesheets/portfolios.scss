@@ -121,7 +121,6 @@ body {
 
 
 
-
 /*  NAVIGATION  */
 
 .portfolio-nav-icons {
@@ -178,4 +177,19 @@ a {
 
 footer {
   padding-top: 1rem;
+}
+
+
+/* SHADOWS */
+.shadow {
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.8) !important;
+}
+
+.shadow-bottom {
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.8) !important;
+}
+
+.shadow-top {
+  box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.8) !important;
+
 }
