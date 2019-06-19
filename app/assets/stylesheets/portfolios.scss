@@ -1,4 +1,10 @@
-@import "bootstrap";
+@import 'bootstrap';
+@import 'font-awesome';
+
+/*
+ * Globals
+ *=require font-awesome
+ */
 
 .navbar {
   margin-bottom: 0;
@@ -54,12 +60,120 @@ footer p {
   margin-bottom: .25rem;
 }
 
+
+
 /*
  * Custom Styles
  */
 
+ //Variables
+$orange-creamsicle: #ff8209;
+$orange-creamsicle-darker-1: #e87709;
+$orange-creamsicle-darker-2: #d16b08;
+$pastel-orange: #ffc147;
+$peach-orange: #ffcd8c;
+$mandarin: #Ed834b;
+$pale-gold: #f3c98b;
+$acajou: #4f3130;
+
+
+
+/* Universals */
+
+body {
+  background-color: $mandarin;
+
+  .album {
+    background-color: $peach-orange;
+  }
+
+  :link,
+  :visited {
+
+    color: white;
+
+
+
+  }
+
+  .card {
+    width: 31%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $acajou;
+  }
+
+}
+
+[class$='-primary'] {
+  background-color:  $orange-creamsicle;
+  border-color: $orange-creamsicle-darker-1;
+}
+
+.btn-primary {
+  &:hover,
+  &:active{
+    background-color: $orange-creamsicle-darker-2;
+    border-color: $orange-creamsicle-darker-2;
+    color: white;
+  }
+}
+
+
+
+
+/*  NAVIGATION  */
+
+.portfolio-nav-icons {
+  transform: scale(1.5);
+  color: rgba(42, 42, 42, 1);
+}
+
+a {
+  &.navbar-brand{
+    color: rgba(42,42,42, 1);
+  }
+}
+
+
+.collapse {
+
+   background-color: $acajou;
+}
+//end NAV
+
+
+
+
+
+/* JUMBOTRON */
+
+.jumbotron {
+  background-color: $pastel-orange;
+}
+
+
+
 .portfolio-container {
-  padding-top: 3rem;
+  margin: 0 auto;
+  margin-top: 4rem;
+  padding: 3rem 0;
+  background-color: $acajou;
+  color: white;
+
+  .portfolio-show-data {
+    padding: 0 3rem;
+  }
+
+}
+
+.portfolio-form {
+  padding: 1.5rem;
+
+  textarea {
+    height: 20rem;
+  }
+
 }
 
 footer {

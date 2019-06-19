@@ -1,36 +1,33 @@
+<article class="container portfolio-container">
 
-<main>
+  <div class="row">
 
-  <article class="container portfolio-container">
-
-    <div class="row">
-
-      <div class="col-xl-7">
-        <%= image_tag @portfolio_item.main_image, :class => 'd-block mx-auto' %>
-      </div>
-
-      <div class="col-xl-5 mt-4">
-        <h1><%= @portfolio_item.title %></h1>
-
-
-        <p><em><%= @portfolio_item.subtitle %></em></p>
-
-
-        <p><%= @portfolio_item.body %></p>
-
-        <h3>Technologies Used:</h3>
-
-        <%	@portfolio_item.technologies.each do |tech| %>
-          <p><%= tech.name %> </p>
-        <% end %>
-
-
-      </div>
+    <div class="col-xl-7">
+      <%= image_tag @portfolio_item.main_image, :class => 'd-block mx-auto' %>
     </div>
 
+    <div class="col-xl-5 mt-4 portfolio-show-data">
+      <h1><%= @portfolio_item.title %></h1>
 
-  </article>
-</main>
+
+      <p><em><%= @portfolio_item.subtitle %></em></p>
+
+
+      <p><%= @portfolio_item.body %></p>
+
+      <h3>Technologies Used:</h3>
+
+      <% @portfolio_item.technologies.each do |tech| %>
+        <p><%= tech.name %> </p>
+      <% end %>
+
+
+    </div>
+  </div>
+
+
+</article>
+
 
 <p class="text-center">
   <%= link_to 'View all portfolio items'.titleize, portfolios_path, class: 'mx-auto mt-5 btn btn-primary' %>
