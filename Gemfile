@@ -93,3 +93,16 @@ gem 'kaminari', '~> 1.1', '>= 1.1.1'
 # jQuery UI gem (used in this project to create drag-and-drop functionality
 # in the portfolios section of the website)
 gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
+
+# Carrierwave is used to upload files to ruby applications and map them to ORM's
+# so that they can be stored on the backend.
+gem 'carrierwave', '~> 1.3', '>= 1.3.1'
+
+# Carrierwave_AWS is used to integrate carrierwave with AWS
+gem 'carrierwave-aws', '~> 1.3'
+
+# mini magick is used to manipulate images with minimaluse of memory
+gem 'mini_magick', '~> 4.9', '>= 4.9.3'
+
+#Autoload dotenv in rails
+gem 'dotenv-rails', '~> 2.7', '>= 2.7.2'
