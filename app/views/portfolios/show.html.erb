@@ -1,11 +1,11 @@
 <article class="container portfolio-container shadow">
 
-  <%= link_to 'Edit Portfolio Item'.titleize, edit_portfolio_path, %>
+  <%= link_to 'Edit Portfolio Item'.titleize, edit_portfolio_path %>
   <div class="row">
 
     <div class="col-md-7">
-      <%= image_tag @portfolio_item.main_image.to_s, class: 'w-100 d-block mx-auto img-fluid border border-light
-      shadow' %>
+      <%= image_tag portfolio_img(@portfolio_item.main_image, 'main'),
+       class: 'w-100 d-block mx-auto img-fluid border border-light shadow' %>
     </div>
 
     <div class="col-md-5 mt-4 portfolio-show-data">
