@@ -46,7 +46,7 @@ class PortfoliosController < ApplicationController
       if @portfolio_item.update(portfolio_params)
         format.html do
           redirect_to portfolios_path,
-                      notice: 'The record was successfully updated.'
+                      notice: "#{@portfolio_item.title} was successfully updated."
         end
       else
         format.html { render :edit }
@@ -61,7 +61,7 @@ class PortfoliosController < ApplicationController
     @portfolio_item.destroy
     respond_to do |format|
       format.html { redirect_to portfolios_url,
-                                notice: 'Portfolio item was deleted' }
+                                notice: "#{@portfolio_item.title} was deleted" }
     end
   end
 

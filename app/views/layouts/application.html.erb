@@ -20,11 +20,11 @@
 
     <div class="cover-container">
 
-       <%= video_tag('manWorking.mp4',
-                     id: 'background',
-                     autoplay: true,
-                     loop: true,
-                     muted: true) %>
+      <%= video_tag('manWorking.mp4',
+                    id:       'background',
+                    autoplay: true,
+                    loop:     true,
+                    muted:    true) %>
 
 
       <%= render 'shared/application_nav' %>
@@ -33,7 +33,7 @@
 
       <%= render 'shared/application_footer' %>
 
-      <%= render 'shared/alerts' %>
+      <%= alerts_helper %>
 
 
       <%#= source_helper %>

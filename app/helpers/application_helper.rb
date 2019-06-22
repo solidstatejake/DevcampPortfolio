@@ -68,4 +68,16 @@ module ApplicationHelper
     request.fullpath == path ? 'Create' : 'Update'
   end
 
+  def alerts_helper
+    alert = (flash[:alert] || flash[:error] || flash[:notice])
+
+    if alert
+      alert_generator(alert)
+    end
+  end
+
+  def alert_generator msg
+    js add_gritter(msg, title: "Change me in application_helper.rb", sticky: false)
+  end
+
 end

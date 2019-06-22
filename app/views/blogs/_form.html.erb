@@ -4,7 +4,7 @@
 
     <% blog.errors.full_messages.each do |error| %>
 
-      <%= js add_gritter(error, title: "Error!", sticky: false) %>
+      <%= alert_generator error %>
 
     <% end %>
 
