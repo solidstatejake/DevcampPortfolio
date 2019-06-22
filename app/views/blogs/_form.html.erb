@@ -27,7 +27,6 @@
   </div>
 
   <div class="form-group">
-    <% button_text = (request.fullpath == new_blog_path ? 'Create' : 'Update') %>
-    <%= form.submit button_text, class: 'btn btn-primary' %>
+    <%= form.submit "#{button_text_helper(new_blog_path)} Blog Item", class: 'btn btn-primary' %>
   </div>
 <% end %>

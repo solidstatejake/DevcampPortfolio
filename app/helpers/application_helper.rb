@@ -51,6 +51,10 @@ module ApplicationHelper
     ]
   end
 
+  def is_active? path
+    'active' if current_page? path
+  end
+
   def nav_helper tag_type, style
     nav_links = '';
     nav_items.each do |item|
@@ -60,7 +64,8 @@ module ApplicationHelper
     nav_links.html_safe
   end
 
-  def is_active? path
-    'active' if current_page? path
+  def button_text_helper path
+    request.fullpath == path ? 'Create' : 'Update'
   end
+
 end
