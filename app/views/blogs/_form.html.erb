@@ -2,17 +2,11 @@
 
   <% if blog.errors.any? %>
 
-    <div id="error_explanation">
+    <% blog.errors.full_messages.each do |error| %>
 
-      <h2><%= pluralize(blog.errors.count, 'error') %> prohibited this blog from being saved:</h2>
+      <%= js add_gritter(error, title: "Error!", sticky: false) %>
 
-      <ul>
-        <% blog.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-
-    </div>
+    <% end %>
 
   <% end %>
 
