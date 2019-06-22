@@ -106,3 +106,6 @@ gem 'mini_magick', '~> 4.9', '>= 4.9.3'
 
 #Autoload dotenv in rails
 gem 'dotenv-rails', '~> 2.7', '>= 2.7.2'
+
+#Cocoon allows for integration of jQuery for helper methods with forms
+gem 'cocoon', '~> 1.2', '>= 1.2.13'
