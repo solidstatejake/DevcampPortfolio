@@ -9,9 +9,9 @@
     <% if logged_in? :site_admin %>
 
       <p class='blog-post-meta'>
-        <%= link_to "Post status: #{blog.status.titleize}", toggle_status_blog_path(blog) %> /
-        <%= link_to 'Edit', edit_blog_path(blog) %> /
-        <%= link_to 'Delete Post', blog, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%= link_to "Post status: #{@blog.status.titleize}", toggle_status_blog_path(@blog) %> /
+        <%= link_to 'Edit', edit_blog_path(@blog) %> /
+        <%= link_to 'Delete Post', @blog, method: :delete, data: { confirm: 'Are you sure?' } %>
       </p>
 
     <% end %>
