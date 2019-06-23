@@ -37,8 +37,8 @@ class BlogsController < ApplicationController
   #        is because of `before_action :set_blog`. This gives up access to the
   #        `@blog` instance variable.
   def show
-    @blog = Blog.includes(:comments).friendly.find(params[:id])
-    @comment = Comment.new
+    @blog       = Blog.includes(:comments).friendly.find(params[:id])
+    @comment    = Comment.new
     @page_title = @blog.title
 
   end
