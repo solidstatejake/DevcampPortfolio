@@ -91,3 +91,6 @@ gem 'cocoon', '~> 1.2', '>= 1.2.13'
 
 #Gritter is used for generating notifications
 gem 'gritter', '~> 1.2'
+
+# Ruby interface to the Twitter API
+gem 'twitter', '~> 6.2'
