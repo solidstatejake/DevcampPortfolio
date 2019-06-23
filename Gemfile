@@ -94,3 +94,7 @@ gem 'gritter', '~> 1.2'
 
 # Ruby interface to the Twitter API
 gem 'twitter', '~> 6.2'
+
+# Redis is a noSQL database. It's very fast. Allows for key-value persistence setup
+# The ability to persist hashes. No object-relational database.
+gem 'redis', '~> 4.1', '>= 4.1.2'
