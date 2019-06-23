@@ -14,8 +14,8 @@ class BlogsController < ApplicationController
   #         methods/pages
   # `site_admin:` means the owner of the site can access everything
   # (since we put :all)
-  access all: [:show, :index],
-         user: { except: [:destroy, :new, :create, :update, :edit, :toggle_status]},
+  access all:        [:show, :index],
+         user:       { except: [:destroy, :new, :create, :update, :edit, :toggle_status] },
          site_admin: :all
 
   # GET /blogs
@@ -26,7 +26,7 @@ class BlogsController < ApplicationController
   # e.g. if we wrote `@blogs = Blog.limit(1)`, then only one
   #      blog post would be shown.
   def index
-    @blogs = Blog.page(params[:page]).per(5)
+    @blogs      = Blog.page(params[:page]).per(5)
     @page_title = 'My Portfolio Blog'
   end
 
@@ -37,6 +37,8 @@ class BlogsController < ApplicationController
   #        is because of `before_action :set_blog`. This gives up access to the
   #        `@blog` instance variable.
   def show
+    @blog = Blog.includes(:comments).friendly.find(params[:id])
+    @comment = Comment.new
     @page_title = @blog.title
 
   end
@@ -55,7 +57,7 @@ class BlogsController < ApplicationController
   #
   # This method works like `new()` and `create()` do. That is,
   # `edit()` is to `new()` as `create()` is to `update()`.
-  def edit;
+  def edit
   end
 
   # POST /blogs
