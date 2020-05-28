@@ -67,7 +67,7 @@ gem 'petergate', '~> 2.0', '>= 2.0.1'
 gem 'font-awesome-rails'
 
 # Kaminari gem allows for scope and engine based pagination.
-gem 'kaminari', '~> 1.1', '>= 1.1.1'
+gem 'kaminari', '~> 1.2'
 
 # jQuery UI gem (used in this project to create drag-and-drop functionality
 # in the portfolios section of the website)
