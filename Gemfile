@@ -75,7 +75,7 @@ gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
 
 # Carrierwave is used to upload files to ruby applications and map them to ORM's
 # so that they can be stored on the backend.
-gem 'carrierwave', '~> 1.3', '>= 1.3.1'
+gem 'carrierwave', '~> 1.3'
 
 # Carrierwave_AWS is used to integrate carrierwave with AWS
 gem 'carrierwave-aws', '~> 1.3'
